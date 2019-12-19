@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:H="clr-namespace:EntryRemoveIconAllignment.Controls"
+             mc:Ignorable="d"
+             x:Class="EntryRemoveIconAllignment.MainPage"
+             FlowDirection="LeftToRight">
+
+    <StackLayout  Margin="10, 10, 10, 0" Padding="10, 10, 10, 0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Login " Label.TextColor="Black" HorizontalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="0"  x:Name="Usernamelabel" Text="User Name" Label.TextColor="Black"  HorizontalOptions="Start"/>
+            <H:HEntry Grid.Row="2" Grid.Column="0"  x:Name="usernameEntry"  VisualElement.BackgroundColor="White" Entry.TextColor="Black"  ReturnType="Next"  HorizontalOptions="Start" HorizontalTextAlignment="Start" WidthRequest="350"/>
+            <Label Grid.Row="3" Grid.Column="0"   x:Name="Passwordlabel" Text="Password" Label.TextColor="Black"  HorizontalOptions="Start"/>
+            <H:HEntry Grid.Row="4" Grid.Column="0"  x:Name="passwordEntry" VisualElement.BackgroundColor="White"  Entry.TextColor="Black"   HorizontalOptions="Start" HorizontalTextAlignment="Start" IsPassword="True"  WidthRequest="350"/>
+            <Button Grid.Row="5" Grid.Column="0" Text="Change Languge" Clicked="ChangeLangugeClicked"></Button>
+        </Grid>
+        
+    </StackLayout>
+</ContentPage>
